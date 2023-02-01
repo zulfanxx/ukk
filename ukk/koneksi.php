@@ -1,6 +1,5 @@
-</php 
+<?php 
 
-session_star();
-$db = new PDO ("mysql:host=localhost;dbname=pengaduan_masyarakat","root","");
+session_start();
 
-?>
+$db = new PDO("mysql:host=localhost;dbname=pengaduanmasyarakat","root","");

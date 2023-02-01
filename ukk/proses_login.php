@@ -2,7 +2,7 @@
 session_start();
 $NIK = $_POST['NIK'];
 $Nama = $_POST['Nama'];
-$koneksi = new PDO('mysql:host=localhost;dbname=pengaduan_masyarakat','root');
+$koneksi = new PDO('mysql:host=localhost;dbname=pengaduanmasyarakat','root');
 $query = $koneksi->query("SELECT * FROM `login` WHERE NIK='$NIK' AND Nama='$Nama'");
 $data = $query->fetch();
 if ($data) {

@@ -1,54 +1,28 @@
 <?php
-
-require_once('function/koneksi.php');
-
+    session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>www.pengaduanmasyarakat.com</title>
-	<link rel="stylesheet" href="<?= 'css/style.css' ?>">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>	PENGADUAN MASYARAKAT</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
 </head>
+<body class="form">
+    <h1>SISTEM PENGADUAN MASYARAKAT</h1>
+    <div>
+    <form action="home.php" method="post" name="form_input">
+        <div class="nik">
+        Nik: <input type="number" name="nik" placeholder="Masukan nik" required="" ></br>
+        </div>
+        <div class="nama">
+        Nama: <input type="text" name="nama" placeholder="Nama lengkap" required=""></br>
+        </div>
 
-<body>
-	<div class="topbar">
-		<h3 class="text-topbar">pengaduanmasyarakat</h3>
-	</div>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-		<path fill="#0099ff" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,208C480,224,600,256,720,261.3C840,267,960,245,1080,218.7C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-	</svg>
-
-	<form action="proses_login.php" method="post">
-		<div class="content">
-			<div class="card-login">
-				<div class="card-main">
-					<div class="card-header">Silahkan Di Isi</div>
-					<div class="card-body">
-						<form class="form-login" method="POST" action="<?= '' ?>">
-							<label class="form-label">NO INDUK KELUARGA</label>
-							<input type="NIK" name="NIK" class="form-input">
-
-							<label class="form-label">Nama Lengkap</label>
-							<input type="Nama" name="Nama" class="form-input">
-							<button type="submit" class="btn btn-login">Login</button>
-						</form>
-
-					</div>
-					<div class="text-center">
-						<a class="small" href="register.php">Create an Account!</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="tombol">
+        <input type="submit" name="input" value="LOGIN">
+        <input type="submit" name="input" value="REGISTER">
+      </div>
+    </form>
+</div>
 </body>
-
+</head>
 </html>
