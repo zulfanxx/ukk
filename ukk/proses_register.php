@@ -1,15 +1,14 @@
 <?php
-    include("koneksi.php");
 
+    $nik = $_POST['nik'];
+    $nama = $_POST['nama'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $telp = $_POST['telp'];
 
-    $nik = $_REQUEST["nik"];
-    $password = $_REQUEST["password"];
+    $db  = new PDO("mysql:host=localhost;dbname=pengaduanmasyarakat", 'root', '');
+    $query = $db->query("INSERT INTO masyarakat values('$nik','$nama' , '$username','$password','$telp')");
 
-
-
-    $query = $db->query("select * from masyarakat where nik='$nik' AND password='$password'")->fetchAll();
-    
-
-        header("Location:login.php");
-    
-?>
+    if($query){
+        header("Location:home.php");
+     }
